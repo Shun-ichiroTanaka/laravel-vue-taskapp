@@ -10,11 +10,11 @@ class Board extends Model
 {
     public function lists(): HasMany
     {
-        $this->hasMany(CardList::class, 'borad_id');
+        return $this->hasMany(CardList::class, 'borad_id');
     }
 
     public function owner(): BelongsTo
     {
-        $this->belongsTo(User::class, 'owner_id');
+        return $this->belongsTo(User::class, 'owner_id');
     }
 }
